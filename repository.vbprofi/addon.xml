@@ -6,7 +6,7 @@
         <datadir zip="true">http://raw.github.com/vbprofi/kodi-repo/master/zips/</datadir>
         <dir>
             <info compressed="false">http://raw.github.com/vbprofi/kodi-repo/master/addons.xml</info>
-            <checksum>http://raw.github.com/vbprofi/vbprofi-repo/master/addons.xml.md5</checksum>
+            <checksum>http://raw.github.com/vbprofi/kodi-repo/master/addons.xml.md5</checksum>
             <datadir zip="true">http://raw.github.com/vbprofi/kodi-repo/master/zips/</datadir>
         </dir>
     </extension>
