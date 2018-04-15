@@ -1,5 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.10" provider-name="tvaddons">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="plugin.video.youtube" optional="true" />
+		<import addon="script.module.python.twitch" optional="true" />
+		<import addon="script.module.cryptopy" version="1.2.6" optional="true" />
+		<import addon="plugin.video.gdrive" optional="true" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+		<summary lang="es">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+		<summary lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+		<description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+		<description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+		<forum>https://www.tvaddons.co/forums</forum>
+        <website>https://www.tvaddons.co</website>
+	</extension>
+</addon>
+
+<addon id="script.module.urllib3"
+       name="urllib3"
+       version="1.22"
+       provider-name="shazow">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">urllib3 is a powerful, sanity-friendly HTTP client for Python</summary>
+    <description lang="en_GB">Packed for KODI from https://github.com/shazow/urllib3</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://urllib3.readthedocs.io/en/latest/</website>
+    <source>https://github.com/beenje/script.module.urllib3</source>
+    <email>beenje AT gmail.com</email>
+  </extension>
+</addon>
 
 <addon id="script.video.F4mProxy" 
 	     name="F4mProxy" 
@@ -93,7 +137,7 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="de">vbprofi Repository</summary>
-        <description lang="de">Dies ist das offizielle vbprofi Addon-Verzeichnis.[CR]Bei der Bereitstellung einer neuen Version von Addons wird diese auf Funktionalit�t gepr�ft. Sollten dennoch Probleme auftreten benachrichtige bitte mich.</description>
+        <description lang="de">Dies ist das offizielle vbprofi Addon-Verzeichnis.[CR]Bei der Bereitstellung einer neuen Version von Addons wird diese auf Funktionalität geprüft. Sollten dennoch Probleme auftreten benachrichtige bitte mich.</description>
         <disclaimer lang="de">Die dargestellten Inhalte des in diesem Verzeichnis enthaltenen Addons werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
         <description lang="en">Download and install Addons from the Official vbprofi Addon-Repository.[CR]Before a new version of Addons is provided to this repository the addon was checked for functionality. Please informs me if you should have problems anyway.</description>
         <disclaimer lang="en">The creators of the addon in this repository do not host or distribute any of the content displayed by the addon nor do they have any affiliation with the content providers.</disclaimer>
