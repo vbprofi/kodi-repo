@@ -1,0 +1,11 @@
+Benötigte Abhängigkeiten
+f4m-tester:
+- script.module.certifi
+- script.module.chardet
+- script.module.idna
+- script.module.urllib3
+live streamspro:
+- script.module.certifi
+- script.module.chardet
+- script.module.idna
+- script.module.urllib3
