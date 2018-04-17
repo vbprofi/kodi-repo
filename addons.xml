@@ -1,5 +1,158 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+
+<addon id="service.xbmc.tts"
+       name="Kodi Screen Reader"
+       version="1.0.7"
+       provider-name="Rick Phillips (ruuk), pvagner">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.service" library="main.py" start="login"></extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Text to speech for XBMC</summary>
+    <description lang="en">Text to speech for XBMC</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=117199</forum>
+    <source>https://github.com/ruuk/service.xbmc.tts</source>
+	<website>http://ruuk.github.io/service.xbmc.tts</website>
+  </extension>
+</addon>
+
+<addon id="script.module.livestreamer"
+       name="livestreamer"
+       version="1.12.0"
+       provider-name="Christopher Rosell">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests"
+                      version="1.1.0"
+                     optional="false"/>
+    <import addon="script.module.singledispatch"
+                      version="3.4.0.3"
+                     optional="false"/>
+    <import addon="script.module.futures"
+                      version="2.2.0"
+                     optional="false"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>Livestreamer extracts streams from various services</summary>
+    <description>Livestreamer is a command-line utility that pipes video streams from various services into a video player, such as VLC. The main purpose of Livestreamer is to allow the user to avoid buggy and CPU heavy flash plugins but still be able to enjoy various streamed content. There is also an API available for developers who want access to the video stream data.</description>
+    <platform>all</platform>
+    <license>Simplified BSD</license>
+    <source>https://github.com/chrippa/livestreamer.git</source>
+    <website>http://livestreamer.io</website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.f4mTester" name="f4mTester" version="2.7.2" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.7.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.xstream" name="xStream Repository" version="1.1.1" provider-name="xStream-Team">
+    <extension point="xbmc.addon.repository" name="xStream Repository">
+        <info compressed="false">http://raw.github.com/xStream-Kodi/xStreamRepo/master/addons.xml</info>
+        <checksum>http://raw.github.com/xStream-Kodi/xStreamRepo/master/addons.xml.md5</checksum>
+        <datadir zip="true">http://raw.github.com/xStream-Kodi/xStreamRepo/master/zips/</datadir>
+        <dir>
+            <info compressed="false">http://raw.github.com/xStream-Kodi/xStreamRepo/master/addons.xml</info>
+            <checksum>http://raw.github.com/xStream-Kodi/xStreamRepo/master/addons.xml.md5</checksum>
+            <datadir zip="true">http://raw.github.com/xStream-Kodi/xStreamRepo/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de">xStream Repository</summary>
+        <description lang="de">Dies ist das offizielle xStream Addon-Verzeichnis.[CR]Bei der Bereitstellung einer neuen Version von xStream wird diese auf Funktionalität geprüft. Sollten dennoch Probleme auftreten benachrichtige bitte das offizielle xStream-Team.</description>
+        <disclaimer lang="de">Die dargestellten Inhalte des in diesem Verzeichnis enthaltenen Addons werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
+        <description lang="en">Download and install xStream from the Official xStream Addon-Repository.[CR]Before a new version of xStream is provided to this repository the addon was checked for functionality. Please informs the official xStream-Team if you should have problems anyway.</description>
+        <disclaimer lang="en">The creators of the addon in this repository do not host or distribute any of the content displayed by the addon nor do they have any affiliation with the content providers.</disclaimer>
+        <forum>http://xstream-addon.square7.ch</forum>
+        <website>https://xstream-kodi.github.io</website>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.unofficial.addon.pro"
+                name="Unofficial [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] Mediacenter OS Add-ons"
+                version="4.0.0"
+                provider-name="unofficial.addon.pro">
+        <extension point="xbmc.addon.repository"
+                name="Unfficial OpenELEC.tv Add-on Repository">
+                <info>http://unofficial.addon.pro/addons/4.1/Generic/x86_64/addons.xml</info>
+                <checksum>http://unofficial.addon.pro/addons/4.1/Generic/x86_64/addons.xml.md5</checksum>
+                <datadir zip="true">http://unofficial.addon.pro/addons/4.1/Generic/x86_64</datadir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+                <summary>Unofficial addon repository for OpenELEC</summary>
+                <description>Unofficial addon repository for OpenELEC</description>
+                <disclaimer>This is an unofficial addon repository. please don't ask for support in openelec forum / irc channel</disclaimer>
+                <platform>all</platform>
+        </extension>
+</addon>
+
+<addon id="repository.kodinerds" name="kodinerds.net Add-ons" version="6.0.0" provider-name="L0RE">
+	<extension point="xbmc.addon.repository" name="L0RE">
+		<info compressed="true">https://raw.githubusercontent.com/kodinerds/repo/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/kodinerds/repo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/kodinerds/repo/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Official Repository of Kodinerds</summary>
+		<summary lang="de">Offizielles Repository der Kodinerds</summary>
+		<description lang="en">This is the official Repository of the german Community 'Kodinerds' which you'll find at www.kodinerds.net. Most of the hosted Addons are supported by the members of the Community. Enjoy!</description>
+		<description lang="de">Das ist das offizielle Repository der deutschen Community 'Kodinerds', welche Du unter www.kodinerds.net findest. Die meisten der hier gehosteten Addons werden von den Mitgliedern der Community aktiv supported. Viel Spaß!</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.exodus" name="Exodus repository" version="4.0.0" provider-name="Exodus">
+	<extension point="xbmc.addon.repository" name="Exodus repository">
+	<dir>
+		<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+	</dir>
+
+    <dir>
+		<info compressed="false">https://github.com/nrwzum/freelance/raw/master/fun-stuff/addons.xml</info>
+		<checksum>https://github.com/nrwzum/freelance/raw/master/fun-stuff/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/nrwzum/freelance/raw/master/fun-stuff/</datadir>
+    </dir>
+    <dir>
+		<info compressed="false">https://github.com/bridgegirl/lonelycode/raw/master/puffpuffpass/addons.xml</info>
+		<checksum>https://github.com/bridgegirl/lonelycode/raw/master/puffpuffpass/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/bridgegirl/lonelycode/raw/master/puffpuffpass/</datadir>
+    </dir>
+    <dir>
+		<info compressed="false">https://github.com/bradonfire/winnerwinnerchickendinner/raw/master/reference-work/addons.xml</info>
+		<checksum>https://github.com/bradonfire/winnerwinnerchickendinner/raw/master/reference-work/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/bradonfire/winnerwinnerchickendinner/raw/master/reference-work/</datadir>
+    </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Exodus repository</summary>
+		<description lang="en">Exodus repository</description>
+		<platform>all</platform>
+		<forum>https://www.tvaddons.co/forums</forum>
+        <website>https://www.tvaddons.co</website>
+	</extension>
+</addon>
+
 <addon id="repository.tva.common" name="TVADDONS.CO Resolvers Repository" version="2.0.0" provider-name="tvaddons">
     <extension point="xbmc.addon.repository" name="TVADDONS.CO Resolvers Repository">
         <info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
@@ -224,7 +377,7 @@
   </extension>
 </addon>
 
-<addon id="repository.vbprofi" name="vbprofi Repository" version="1.0.1" provider-name="vbprofi">
+<addon id="repository.vbprofi" name="vbprofi Repository" version="1.0.2" provider-name="vbprofi">
     <extension point="xbmc.addon.repository" name="vbprofi Repository">
         <info compressed="false">http://raw.github.com/vbprofi/kodi-repo/master/addons.xml</info>
         <checksum>http://raw.github.com/vbprofi/kodi-repo/master/addons.xml.md5</checksum>
