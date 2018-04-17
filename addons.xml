@@ -115,7 +115,7 @@
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
-        <provides>video</provides>
+        <provides>audio video</provides>
   </extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
