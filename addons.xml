@@ -115,7 +115,6 @@
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.python.pluginsource" library="lib/default.py">
-<extension point="xbmc.python.script"         library="lib/default.py">
 <provides>executable</provides>
   </extension>
 	<extension point="xbmc.addon.metadata">
