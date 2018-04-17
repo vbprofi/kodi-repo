@@ -103,6 +103,7 @@
 	<extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
         <provides>video</provides>
+  </extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
@@ -124,7 +125,6 @@
   </requires>
   <extension point="xbmc.python.module"
              library="lib" />
-        <provides>video</provides>
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">urllib3 is a powerful, sanity-friendly HTTP client for Python</summary>
     <description lang="en_GB">Packed for KODI from https://github.com/shazow/urllib3</description>
