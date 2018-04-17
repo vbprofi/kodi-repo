@@ -1,11 +1,21 @@
 Benötigte Abhängigkeiten
-f4m-tester:
+F4mProxy:
 - script.module.certifi
 - script.module.chardet
 - script.module.idna
 - script.module.urllib3
+
+F4M Tester:
+- script.module.certifi
+- script.module.chardet
+- script.module.idna
+- script.module.urllib3
+
 live streamspro:
 - script.module.certifi
 - script.module.chardet
 - script.module.idna
 - script.module.urllib3
+
+nach folgendem beispiel aus dem wiki die scriptmodule angepasst:
+https://kodi.wiki/view/addon.xml
