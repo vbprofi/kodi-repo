@@ -114,8 +114,8 @@
 		<import addon="plugin.video.gdrive" optional="true" />
 	</requires>
 	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
-        <provides>audio video</provides>
+	<extension point="xbmc.python.pluginsource" library="lib/default.py">
+<provides>executable</provides>
   </extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
@@ -246,4 +246,3 @@
 </addon>
 
 </addons>
-
