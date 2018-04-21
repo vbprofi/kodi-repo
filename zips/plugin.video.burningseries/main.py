@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import xbmc, xbmcgui, xbmcplugin, xbmcaddon, xbmcvfs
 import sys, os, random, json, zlib
 import urllib, urllib2, cookielib
@@ -172,7 +172,7 @@ def showEpisodes(n,id,season):
 	data = json.loads(getUrl("series/"+str(id)+"/"+str(season)))
 	#print data
 	for d in data['epi']:
-		episodeName = "#"+str(d['epi'])
+		episodeName = " "+str(d['epi'])
 		if 'german' in d:
 			episodeName += " "+d['german']
 		if 'english' in d:
