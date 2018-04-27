@@ -1,0 +1,25 @@
+<settings>
+    <setting id="1080pquality" value="true" />
+    <setting id="add_playlist" value="false" />
+    <setting id="ask_playlist_items" value="false" />
+    <setting id="browse_community" value="false" />
+    <setting id="browse_xml_database" value="false" />
+    <setting id="choose_source" value="1" />
+    <setting id="debug" value="false" />
+    <setting id="disableepg" value="false" />
+    <setting id="donotshowbychannels" value="false" />
+    <setting id="genesisorpulsar" value="0" />
+    <setting id="gmtfrom" value="2" />
+    <setting id="groupm3ulinks" value="true" />
+    <setting id="hlsretry" value="true" />
+    <setting id="logo-folderPath" value="" />
+    <setting id="logo_folderPath" value="" />
+    <setting id="new_file_source" value="" />
+    <setting id="new_url_source" value="" />
+    <setting id="parentalblocked" value="false" />
+    <setting id="parentalblockedpin" value="" />
+    <setting id="save_location" value="" />
+    <setting id="searchotherplugins" value="false" />
+    <setting id="tsdownloader" value="true" />
+    <setting id="use_thumb" value="false" />
+</settings>
