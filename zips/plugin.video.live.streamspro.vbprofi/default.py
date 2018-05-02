@@ -44,11 +44,23 @@ if REMOTE_DBG:
             "You must add org.python.pydev.debug.pysrc to your PYTHONPATH.")
         sys.exit(1)
 
+        
+
 
 addon = xbmcaddon.Addon('plugin.video.live.streamspro.vbprofi')
 addon_version = addon.getAddonInfo('version')
 profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
 home = xbmc.translatePath(addon.getAddonInfo('path').decode('utf-8'))
+### start modification ###
+if not os.path.exists(profile):
+        os.makedirs(profile)
+fo = open(home + '\\resources\\source_file', 'r')
+text = fo.read()
+fo.close()
+fo = open(profile + 'source_file','w')
+fo.write(text)
+fo.close()
+### end modification ###        
 favorites = os.path.join(profile, 'favorites')
 history = os.path.join(profile, 'history')
 REV = os.path.join(profile, 'list_revision')
@@ -70,7 +82,7 @@ else: SOURCES = []
 
 def addon_log(string):
     if debug == 'true':
-        xbmc.log("[addon.live.streamspro-%s]: %s" %(addon_version, string))
+        xbmc.log("[addon.live.streamspro.vbprofi-%s]: %s" %(addon_version, string))
 
 
 def makeRequest(url, headers=None):
