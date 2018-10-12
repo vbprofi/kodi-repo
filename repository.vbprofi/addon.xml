@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.vbprofi" name="vbprofis Repository" version="1.0.6" provider-name="vbprofi">
+<addon id="repository.vbprofi" name="vbprofis Repository" version="1.0.7" provider-name="vbprofi">
     <extension point="xbmc.addon.repository" name="vbprofi Repository">
         <info compressed="false">http://raw.github.com/vbprofi/kodi-repo/master/addons.xml</info>
         <checksum>http://raw.github.com/vbprofi/kodi-repo/master/addons.xml.md5</checksum>
