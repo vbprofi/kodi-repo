@@ -54,7 +54,7 @@ home = xbmc.translatePath(addon.getAddonInfo('path').decode('utf-8'))
 ### start modification ###
 if not os.path.exists(profile):
         os.makedirs(profile)
-fo = open(home + '\\resources\\source_file', 'r')
+fo = open(home + '/resources/source_file', 'r')
 text = fo.read()
 fo.close()
 fo = open(profile + 'source_file','w')
