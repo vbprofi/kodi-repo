@@ -1,6 +1,236 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 
+<addon id="plugin.video.xstream" name="xStream" version="3.5.6" provider-name="xStream-Team">
+ <requires>
+   <import addon="xbmc.python"                 version="2.14.0"/>
+   <import addon="repository.xstream"          version="1.1.1" />
+   <import addon="script.module.urlresolver"   version="3.0.0"/>
+   <import addon="script.module.metahandler"   version="1.0.0"/>
+   <import addon="script.module.inputstreamhelper" version="0.3.3" optional="true"/>
+ </requires>
+ <extension point="xbmc.python.pluginsource" library="default.py">
+   <provides>video</provides>
+ </extension>
+ <extension point="xbmc.addon.metadata">
+   <summary lang="de">Watch xStream!</summary>
+   <description lang="de">Mit diesem Addon kannst du auf alle angebotenen Streams verschiedenster deutschen Quellen zugreifen</description>
+   <disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
+   <forum>https://lastship.ch</forum>
+   <source>https://github.com/lastship/plugin.video.xstream</source>
+   <license>GNU GPLv3</license>
+   <platform>all</platform>
+   <news>
+   xStream 3.5.6
+- [cinenator] site offline
+- [kinox.one] no streams
+- [movie2k.ag] recaptcha
+- [kino.cx] add mystream hoster support
+- [Foxx.to] Fix regex
+- [Alleserien] Fix Hoster
+- Update cookie_helper.py
+   </news>
+   <assets>
+     <icon>icon.png</icon>
+     <fanart>fanart.jpg</fanart>
+     <screenshot>resources/art/screenshot-01.jpg</screenshot>
+     <screenshot>resources/art/screenshot-02.jpg</screenshot>
+   </assets>
+ </extension>
+</addon>
+
+<addon id="plugin.video.netflix" name="Netflix" version="0.13.22" provider-name="libdev + jojo + asciidisco">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.requests" version="2.12.4"/>
+    <import addon="script.module.pycryptodome" version="3.4.3"/>
+    <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+    <import addon="script.module.addon.signals" version="0.0.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="de_DE">Netflix</summary>
+    <description lang="de_DE">Addon für Netflix VOD Services</description>
+    <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
+    <summary lang="en_GB">Netflix</summary>
+    <description lang="en_GB">Netflix VOD Services Addon</description>
+    <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+    </assets>
+    <language>en de es he hr it nl pl pt sk sv</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://www.netflix.com</website>
+    <email>public at asciidisco dot com</email>
+    <forum>https://www.kodinerds.net/index.php/Thread/55612-PreRelease-Plugin-Netflix-Inputstream/</forum>
+    <source>https://github.com/asciidisco/plugin.video.netflix</source>
+    <news>
+v0.13.22 (2019-03-08)
+- Fix menu listing (credits @xLAva)
+
+v0.13.21 (2018-12-03)
+- More codec levels for FHD / UHD
+
+v0.13.20 (2018-11-29)
+- MSLv2 for manifest retrieval
+
+v0.13.19 (2018-11-24)
+- Fix VTT / VP9 issues
+
+v0.13.18 (2018-11-17)
+- Write correct codec into VP9 MPEG DAS profiles
+
+v0.13.17 (2018-11-16)
+- Add VP9 profiles to avoid PRK exception while downloading manifest
+- Android ESN generation enhanced
+
+v0.13.16 (2018-11-13)
+- WebVTT subtitles
+
+v0.13.13 (2018-09-13)
+- Fix disabling of intro skipping not working
+
+v0.13.12 (2018-08-21)
+- Fix issues with timeline markers
+
+v0.13.11 (2018-08-20)
+- Fix login issues
+- Fix fanarts for non-netflix originals
+- Add Korean translation
+- Update Italian translation
+- Add query parameter widget_display to suppress setting custom view modes when called from a widget
+- Skip intro and recap
+- Remember audio settings across all episodes of a show
+
+v0.13.9 (2018-06-14)
+- fix login issues after typo fix in netflix login page
+
+v0.13.8 (2018-06-07)
+- fix proxy communication
+- fix folder definition for image resources
+
+v0.13.7 (2018-05-28)
+- rework of login info parsing
+
+v0.13.0 (2018-04-26)
+- Android support WIDEVINE Cryptosession for MSL
+
+v0.12.9 (2018-04-16)
+- View for exported
+- Support for inputstreamhelper
+- Grab metadate for episodes on export
+- Auto export new episodes for exported shows
+- Auto update watched status inside kodi library
+    </news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.live.streamspro"
+       name="LiveStreamsPro"
+       version="2.8.5"
+       provider-name="Shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.resolveurl" optional="true"/>
+    <import addon="script.module.simplejson" />    
+    <import addon="script.module.livestreamer" optional="true"/>
+    <import addon="script.module.slproxy" optional="true"/>
+    <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+
+  <extension point="xbmc.addon.metadata">
+    <summary>livestreamspro- shamelessly forked from livestreams but added many things</summary>
+    <description>
+        In addition to what livestreams allowed you to do, you can now,
+        1. call regex in regex,
+        2. multiple regex in page, regex in session, also htmlunescape responses
+        3. create session from one regex and pass onto next in line
+        4. save sessions to a file and open again later
+        5. write python code in .py file, put in the profile directory and then call from your regex.
+        6. use epoctime, guid and unpack as functions already defined.
+        7. Use it to post values to the pages to get the proper responses
+        8. support many headers, like origin, X-Requested-With
+        9. you can now append cookies in response and then read in regex using includeheaders
+        10. You can now link to another web url via your xml using externallink
+        11. support for google captcha, now you can show and then post the text
+        
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.vbprofi" name="vbprofis Repository" version="1.0.8" provider-name="vbprofi">
+    <extension point="xbmc.addon.repository" name="vbprofi Repository">
+        <info compressed="false">https://raw.github.com/vbprofi/kodi-repo/master/addons.xml</info>
+        <checksum>https://raw.github.com/vbprofi/kodi-repo/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.github.com/vbprofi/kodi-repo/master/zips/</datadir>
+        <dir>
+            <info compressed="false">https://raw.github.com/vbprofi/kodi-repo/master/addons.xml</info>
+            <checksum>https://raw.github.com/vbprofi/kodi-repo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.github.com/vbprofi/kodi-repo/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de">vbprofi Repository</summary>
+        <description lang="de">Dies ist das offizielle vbprofi Addon-Verzeichnis.[CR]Bei der Bereitstellung einer neuen Version von den Addons wird diese auf Funktionalität geprüft. Sollten dennoch Probleme auftreten benachrichtige bitte mich.</description>
+        <disclaimer lang="de">Die dargestellten Inhalte des in diesem Verzeichnis enthaltenen Addons werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
+        <description lang="en">Download and install Addons from the Official vbprofi Addon-Repository.[CR]Before a new version of Addons is provided to this repository the addon was checked for functionality. Please informs me if you should have problems anyway.</description>
+        <disclaimer lang="en">The creators of the addons in this repository do not host or distribute any of the content displayed by the addons nor do they have any affiliation with the content providers.</disclaimer>
+                        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="2019.03.14"
+  name="SportsDevil"
+  provider-name="SportsDevil">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.dateutil" />
+   <import addon="script.module.simplejson" />
+   <import addon="script.module.six" />
+   <import addon="script.module.requests" />   
+   <import addon="plugin.video.f4mTester" />
+   <import addon="script.module.slproxy" />
+   <import addon="script.module.tvone1111" />
+   <import addon="script.module.tvone" />
+  </requires>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <!-- <extension point="xbmc.service" library="service/streamlink_proxy.py" /> -->
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SportsDevil</summary>
+    <description lang="en">[I]There can only be one.[/I][CR][CR]Unofficial Kodi Addon.</description>
+    <disclaimer lang="en">There can only be one.</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.live.streamspro.vbprofi"
        name="LiveStreamsPro v2.8.1 (by vbprofi)"
        version="1.1"
