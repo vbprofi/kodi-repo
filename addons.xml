@@ -1,6 +1,712 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 
+<addon id="repository.vbprofi" name="vbprofis Repository" version="1.1.0" provider-name="vbprofi">
+	<extension point="xbmc.addon.repository" name="vbprofi Repository">
+		<dir>
+			<info compressed="false">https://raw.github.com/vbprofi/kodi-repo/master/addons.xml</info>
+			<checksum>https://raw.github.com/vbprofi/kodi-repo/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.github.com/vbprofi/kodi-repo/master/zips/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+        <summary lang="de">vbprofi Repository</summary>
+        <description lang="de">Dies ist das offizielle vbprofi Addon-Verzeichnis.[CR]Bei der Bereitstellung einer neuen Version von den Addons wird diese auf Funktionalität geprüft. Sollten dennoch Probleme auftreten benachrichtige bitte mich.</description>
+        <disclaimer lang="de">Die dargestellten Inhalte des in diesem Verzeichnis enthaltenen Addons werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
+        <description lang="en">Download and install Addons from the Official vbprofi Addon-Repository.[CR]Before a new version of Addons is provided to this repository the addon was checked for functionality. Please informs me if you should have problems anyway.</description>
+        <disclaimer lang="en">The creators of the addons in this repository do not host or distribute any of the content displayed by the addons nor do they have any affiliation with the content providers.</disclaimer>
+                        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.module.idna"
+       name="idna"
+       version="2.8"
+       provider-name="Kim Davies">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Internationalized Domain Names for Python</summary>
+    <description lang="en_GB">Packed for KODI from https://github.com/kjd/idna</description>
+    <platform>all</platform>
+    <language></language>
+    <license>BSD</license>
+    <forum></forum>
+    <website>https://github.com/kjd/idna</website>
+    <source>https://github.com/Freso/script.module.idna</source>
+    <email>freso.dk AT gmail.com</email>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.kodi-six"
+       name="Kodi Six"
+       version="0.1.3"
+       provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Wrappers around Kodi Python API for seamless Python 2/3 compatibility</summary>
+    <description lang="en_GB">Wrappers around Kodi Python API that normalize handling of textual and byte strings in Python 2 and 3.</description>
+    <platform>all</platform>
+    <license>GPL v.3</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=327883</forum>
+    <source>https://github.com/romanvm/kodi.six</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <news>0.1.3:
+- Fix non-UTF-8 byte string decoding in Python 2.</news>
+  </extension>
+</addon>
+
+<addon id="script.module.mechanicalsoup"
+	name="MechanicalSoup"
+	version="0.12.0"
+	provider-name="Matthew Hickford, Dan Hemberger, Matthieu Moy">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.requests" version="2.0.0"/>
+		<import addon="script.module.beautifulsoup4" version="4.4.0"/>
+		<import addon="script.module.six" version="1.4.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">A Python library for automating interaction with websites.</summary>
+		<forum></forum>
+		<website>https://mechanicalsoup.readthedocs.io/</website>
+		<license>MIT</license>
+		<platform>all</platform>
+		<source>https://github.com/MechanicalSoup/MechanicalSoup</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+	</extension>
+</addon>
+
+<addon id="script.module.myconnpy"
+       name="MySQL Connector/Python"
+       version="1.1.7"
+       provider-name="MySQL">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">MySQL Connector/Python</summary>
+        <description lang="en">MySQL Connector/Python is implementing the MySQL Client/Server protocol completely in Python. This means you don't have to compile anything or MySQL (client library) doesn't even have to be installed on the machine.</description>
+        <license>GPLv2</license>
+        <platform>all</platform>
+        <website>http://dev.mysql.com/doc/connector-python/en/index.html</website>
+        <source>http://dev.mysql.com/downloads/connector/python/</source>
+    </extension>
+</addon>
+
+<addon id="script.module.parsedom" name="Parsedom for xbmc plugins" provider-name="TheCollective" version="2.5.2">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Parsedom for xbmc plugins.</summary>
+  </extension>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+        <license>GPLv3</license>
+        <platform>all</platform>
+        <email></email>
+        <website></website>
+        <forum>http://forum.xbmc.org/showthread.php?tid=116498</forum>
+        <source>https://github.com/HenrikDK/xbmc-common-plugin-functions</source>
+        <language></language>
+   </extension>
+</addon>
+
+<addon id="script.module.pyautogui"
+	name="PyAutoGUI"
+	version="0.9.50"
+	provider-name="Al Sweigart">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">PyAutoGUI is a cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse and keyboard.</summary>
+		<forum></forum>
+		<website>https://pyautogui.readthedocs.io/</website>
+		<license>see LICENSE.txt</license>
+		<platform>all</platform>
+		<source>https://github.com/asweigart/pyautogui</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+	</extension>
+</addon>
+
+<addon id="script.module.pysocks" name="PySocks" version="1.6.8" provider-name="anorov">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.win_inet_pton" version="1.1.0" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">A SOCKS proxy client and wrapper for Python</summary>
+    <description lang="en_GB">PySocks lets you send traffic through SOCKS and HTTP proxy servers. It is a modern fork of SocksiPy with bug fixes and extra features.</description>
+    <platform>all</platform>
+    <news>
+## [1.6.8] - 2017-12-21
+- Remove support for EOL Python 3.3
+
+## [1.6.7] - 2017-03-22
+- Make SocksiPy legacy functions kwarg-compatible. See issue [#71](https://github.com/Anorov/PySocks/pull/71).
+- Use setuptools in setup.py to support wheel. See issue [#73](https://github.com/Anorov/PySocks/pull/73).
+- Test and logging enhancements
+
+## [1.6.6] - 2017-01-29
+- Full test suite finally added
+- Travis CI enabled for project
+    </news>
+    <language></language>
+    <license>BSD</license>
+    <forum></forum>
+    <website>https://github.com/Anorov/PySocks</website>
+    <source>https://github.com/dagwieers/script.module.pysocks</source>
+    <email>dag@wieers.com</email>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.python.twitch" name="python-twitch for Kodi" version="2.0.15" provider-name="anxdpanic, A Talented Community">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="script.module.six" version="1.11.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+    </requires>
+    <extension point="xbmc.python.module" library="resources/lib"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <news>
+[upd] Update material to reflect repository changes
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <platform>all</platform>
+        <summary lang="en_GB">Module for interaction with the Twitch.tv API</summary>
+        <description lang="en_GB">python-twitch for Kodi is module for interaction with the Twitch.tv API based on python-twitch by ingwinlu.</description>
+        <license>GPL-3.0-only</license>
+        <source>https://github.com/anxdpanic/script.module.python.twitch</source>
+        <forum>https://twitchaddon.page.link/forum</forum>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<addon id="script.module.pyxbmct"
+   name="PyXBMCt"
+   version="1.3.1"
+   provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.six" />
+    <import addon="script.module.kodi-six" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">PyXBMCt UI framework</summary>
+    <description lang="en_GB">PyXBMCt is a mini-framework for simple XBMC addon UI buliding. It is similar to PyQt and provides parent windows, a number of UI controls (widgets) and a grid layout manager to place controls.</description>
+    <license>GNU GPL v.3</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=174859</forum>
+    <website>http://romanvm.github.io/script.module.pyxbmct/</website>
+    <email>roman1972@gmail.com</email>
+    <source>https://github.com/romanvm/script.module.pyxbmct</source>
+    <news>1.3.1:
+- Fix incompatibility with newer Python 3 Kodi builds
+- Replace future library with six for Python 3 compatibility</news>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>  
+</addon>
+
+<addon id="plugin.video.amazon-test"
+       name="Amazon VOD"
+       version="0.9.0"
+       provider-name="Sandmann79, Varstahl">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+    <import addon="script.module.mechanicalsoup" version="0.12.0"/>
+    <import addon="script.module.pyxbmct" version="1.1.7"/>
+    <import addon="script.module.inputstreamhelper" version="0.4.4"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+    <import addon="script.module.kodi-six" version="0.0.5"/>
+    <import addon="script.module.pyautogui" version="0.9.49"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_GB">Amazon Prime Video Streaming</summary>
+    <summary lang="de_DE">Amazon Prime Instant Video</summary>
+    <description lang="en_GB">Movies and Television Shows for Prime Members</description>
+    <description lang="de_DE">Filme und Serien für Amazon Prime Mitglieder</description>
+    <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
+    <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
+    <source>https://github.com/Sandmann79/xbmc</source>
+    <license>GPL-3.0-or-later</license>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.png</fanart>
+      <clearlogo>clearlogo.png</clearlogo>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.mediathekview"
+	name="MediathekView"
+	version="0.6.6"
+	provider-name="MediathekView.de, Leo Moll">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="script.module.myconnpy" version="1.1.7"/>
+	</requires>
+	<extension
+		point="xbmc.python.pluginsource"
+		library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension
+		point="xbmc.service"
+		library="service.py"
+		start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Öffentlich-Rechtliche Mediatheken</summary>
+		<summary lang="en_GB">Public service video-platforms</summary>
+		<summary lang="it_IT">Piattaforme video dalle emittenti pubbliche</summary>
+		<description lang="de_DE">Ermöglicht den Zugriff auf fast alle deutschen Mediatheken der öffentlich Rechtlichen basierend auf der Datenbank von MediathekView.de</description>
+		<description lang="en_GB">Gives access to most video-platforms from German public service broadcasters using the database of MediathekView.de</description>
+		<description lang="it_IT">Fornisce l'accesso a gran parte delle piattaforme video operate dalle emittenti pubbliche tedesche usando la banca dati di MediathekView.de</description>
+		<news>
+v.0.6.6 (2020-11-20):
+- [fix] #175 fix for airdate 1969 (update mySql DB structure)
+- [other] #173 delay service startup by 10 sec to avoid error message 
+- [other] #171 / #170 improved memory usage
+- [new] #169 new sort order (airdate desc)
+- [new] define content type in settings to enable more skins
+- [new] Bulk insert for mySQL / update to latest mySql driver
+v.0.6.4 (2020-05-26):
+[fix]
+- #143 ijson issue on FireTvStick
+- #136 MySql caching_sha2_password issue
+- #135 HTTPMessage Header issue
+- #134 ijson issue
+- #124 Corrupt database
+- #166 Sorttitle missing in shows and channel list
+- #168 Added urlopen timeout
+- Fixed heading on DB-Status-Dialog
+[new]
+- #140 / #131 Datenbank check interval
+- #71 Default Sort
+- #95 Sort by time, date
+- #147 Show error message for 8 sec
+[others]
+- Update 3rd party code for Py3 (subtitles SRT-Files)
+- Update cache for sqlListe for invalidate after DB update
+- RBTV logo add
+- Python 3 compat
+- Kodi loglevel change (notice to info)
+- Add User Agent String for all request to fix issue with ORF
+</news>
+		<platform>all</platform>
+		<language>de fr</language>
+		<license>MIT</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=326799</forum>
+		<source>https://github.com/mediathekview/plugin.video.mediathekview</source>
+		<website>https://mediathekview.de/</website>
+		<email>info@mediathekview.de</email>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot1.png</screenshot>
+			<screenshot>resources/screenshot2.png</screenshot>
+			<screenshot>resources/screenshot3.png</screenshot>
+			<screenshot>resources/screenshot4.png</screenshot>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.netflix" name="Netflix" version="1.12.1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.addon.signals" version="0.0.3"/>
+    <import addon="script.module.future" version="0.17.1"/>
+    <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+    <import addon="script.module.pycryptodome" version="3.4.3"/>
+    <import addon="script.module.requests" version="2.12.4"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.python.module" library="packages/mysql-connector-python"/>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="cs_CZ">Netflix</summary>
+    <description lang="cs_CZ">Plugin pro sledování filmů, seriálů online z Netflixu</description>
+    <disclaimer lang="cs_CZ">Použití tohoto doplňku nemusí být ve vaší zemi pobytu legální - před instalací dbejte na vaše zákony.</disclaimer>
+    <summary lang="de_DE">Netflix</summary>
+    <description lang="de_DE">Addon für Netflix VOD-Dienste</description>
+    <disclaimer lang="de_DE">Möglicherweise ist die Verwendung dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
+    <summary lang="en_GB">Netflix</summary>
+    <description lang="en_GB">Netflix VOD Services Add-on</description>
+    <disclaimer lang="en_GB">The use of this add-on may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <summary lang="el_GR">Νέτφλιξ</summary>
+    <description lang="el_GR">Πρόσθετο υπηρεσιών κατά παραγγελία του Νέτφλιξ</description>
+    <disclaimer lang="el_GR">Η χρήση αυτού του προσθέτου μπορεί να μην είναι νόμιμη στην χώρα που κατοικείτε - παρακαλώ ελέγξτε τους τοπικούς νόμους πριν την εγκατάσταση.</disclaimer>
+    <summary lang="nl_NL">Netflix</summary>
+    <description lang="nl_NL">Bekijk Netflix films en tvprogramma's in Kodi.</description>
+    <disclaimer lang="nl_NL">Sommige delen van deze add-on zijn mogelijk onwettig in jouw land - raadpleeg de lokale wetgeving alvorens deze add-on te installeren.</disclaimer>
+    <summary lang="ja_JP">Netflix</summary>
+    <description lang="ja_JP">Netflix VOD サービスアドオン</description>
+    <disclaimer lang="ja_JP">一部の国では、このアドオンを使用するのが不法でありますので、設置する前に必ず関連法律を確認してください</disclaimer>
+    <summary lang="ko_KR">Netflix</summary>
+    <description lang="ko_KR">Netflix VOD 서비스애드온</description>
+    <disclaimer lang="ko_KR">일부 국가에서는 이 애드온을 사용하는 것이 불법일 수도 있으니, 설치하기전 관련 법을 확인하기 바랍니다.</disclaimer>
+    <description lang="it_IT">Netflix Add-on servizi VOD</description>
+    <disclaimer lang="it_IT">L'utilizzo di questo add-on potrebbe non essere legale nel vostro paese di residenza - si prega di verificare le leggi in vigore prima dell'installazione.</disclaimer>
+    <summary lang="es_ES">Netflix</summary>
+    <description lang="es_ES">Complemento para los Servicios VOD de Netflix</description>
+    <disclaimer lang="es_ES">El uso de este complemento puede no ser legal en su país de residencia - Por favor, consulte las leyes locales antes de instalarlo.</disclaimer>
+    <summary lang="hu_HU">Netflix</summary>
+    <description lang="hu_HU">Netflix VOD kiegészítő a Kodihoz</description>
+    <disclaimer lang="hu_HU">Előfordulhat, hogy a kiegészítő használata nem törvényes az Ön országában - telepítés előtt tájékozódjon a helyi törvényekről</disclaimer>
+    <summary lang="pt_BR">Netflix</summary>
+    <description lang="pt_BR">Add-on para os serviços VOD do Netflix</description>
+    <disclaimer lang="pt_BR">O uso deste addon pode não ser legal no seu país de residência - por favor, verifique as suas leis locais antes de instalar.</disclaimer>
+    <summary lang="tr_TR">Netflix</summary>
+    <description lang="tr_TR">Netflix VOD Hizmetleri Eklentisi</description>
+    <disclaimer lang="tr_TR">Bu eklentinin bazı bölümleri ikamet ettiğiniz ülkede yasal olmayabilir - lütfen yüklemeden önce yerel yasalarınıza bakın.</disclaimer>
+    <summary lang="ro_RO">Netflix</summary>
+    <description lang="ro_RO">Add-on pentru servicii video la cerere Netflix</description>
+    <disclaimer lang="ro_RO">Utilizarea acestui add-on ar putea fi ilegală în țara în care locuiți - vă rugăm să verificați legile locale înainte de instalare.</disclaimer>
+    <summary lang="sv_SE">Netflix</summary>
+    <description lang="sv_SE">Netflix VOD Service-tillägg</description>
+    <disclaimer lang="sv_SE">Användandet av detta tillägg kanske inte är lagligt i ditt hemland - kontrollera med dina lokala lagar innan du installerar.</disclaimer>
+    <summary lang="zh_CN">Netflix</summary>
+    <description lang="zh_CN">Netflix VOD服务附加组件</description>
+    <disclaimer lang="zh_CN">此附加组件在您的居住国可能不合法-请在安装前与您当地的法律核对。</disclaimer>
+    <summary lang="fr_FR">Netflix</summary>
+    <description lang="fr_FR">Extension Netflix SVoD</description>
+    <disclaimer lang="fr_FR">L'utilisation de cette extension n'est peut-être pas légale dans votre pays de résidence - renseignez-vous avant de l'installer</disclaimer>
+    <summary lang="pl_PL">Netflix</summary>
+    <description lang="pl_PL">Wtyczka dla usług VOD serwisu Netflix</description>
+    <disclaimer lang="pl_PL">Korzystanie z tego dodatku może być niezgodne z prawem w twoim kraju zamieszkania - przed zainstalowaniem zapoznaj się z lokalnymi przepisami.</disclaimer>
+    <summary lang="he_IL">Netflix</summary>
+    <description lang="he_IL">תוסף VOD לשירות של Netflix</description>
+    <disclaimer lang="he_IL">השימוש בתוסף זה עלול להיות לא חוקי במדינת מגוריך - אנא בדוק את החוק ברשות המקומית לפני ההתקנה</disclaimer>
+	<assets>
+      <icon>resources/media/icon.png</icon>
+      <fanart>resources/media/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot-01.jpg</screenshot>
+      <screenshot>resources/media/screenshot-02.jpg</screenshot>
+      <screenshot>resources/media/screenshot-03.jpg</screenshot>
+      <screenshot>resources/media/screenshot-04.jpg</screenshot>
+      <screenshot>resources/media/screenshot-05.jpg</screenshot>
+    </assets>
+    <language>en cs de es fr he hr hu it ja ko nl pl pt ro sv tr zh</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://www.netflix.com</website>
+    <email></email>
+    <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
+    <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
+    <news>
+v1.12.1 (2021-01-02)
+- Fixed an issue that not allow to use same profile to play videos with UpNext
+- Disabled UpNext when play STRM of a shared path (Wiki: Share STRM library with multiple devices - OPTION 2)
+    </news>
+  </extension>
+</addon>
+
+<addon id="plugin.video.xstream" name="xStream" version="3.5.20" provider-name="xStream-Team">
+ <requires>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.six" version="1.11.0"/>
+    <import addon="repository.xstream" optional="true"/>
+    <import addon="script.module.inputstreamhelper" version="0.3.3" optional="true"/>
+ </requires>
+ <extension point="xbmc.python.pluginsource" library="default.py">
+   <provides>video</provides>
+ </extension>
+     <extension point="xbmc.service" library="service.py" start="startup" />
+ <extension point="xbmc.addon.metadata">
+   <summary lang="de">Watch xStream!</summary>
+   <description lang="de">Mit diesem Addon kannst du auf alle angebotenen Streams verschiedenster deutschen Quellen zugreifen</description>
+   <disclaimer lang="de">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Content-Anbietern.</disclaimer>
+   <source>https://github.com/streamxstream/plugin.video.xstream</source>
+   <license>GNU GPLv3</license>
+   <platform>all</platform>
+   <news>
+3.5.20
+- [view4u] seite überarbeitet
+- [general] code optimiert BIG TNX damnms
+- [streamworld] Seite hinzugefügt
+- [kinoger] fix hoster TNX kasi
+- [view4U] Seite hinzugefügt
+- [moviestream] Seite entfernt
+- [topstreamfilm] Seite entfernt
+- [kinox] fix hoster
+- [TMDB] Fix Problem mit Jahr
+- xStream Einstellungen TMDB neu gestaltet
+- [general] Globale Suche abbrechbar
+- [alleserien] fix year
+- [general] staffel erkennung verbessert
+- [kinoger] fix hoster protonvideo
+- [Erweiterte Info (TMDB)] Cast überarbeitet
+- [Erweiterte Info (TMDB)] Trailers überarbeitet
+- [TMDB] überarbeitet und code cleanup
+- [kinoag] add site
+- [hd-streams.to] entfernt
+- [stream_to] entfernt
+- [s.to] TMDB deaktiviert bei "Alle Serien"
+- [TMDB] fix ValueError invalid literal for int
+- [TMDB] serien erkennung erhöht, overhead reduziert, code cleanup
+- [topstreamfilm] add Beliebte, code cleanup
+- [TMDB] episodes add support crew
+- [filmpalast] fix episodes
+- [moviestream] fix episodes
+- [movietown] fix episodes
+- [TMDB] episodes unterstützung hinzugefügt
+- [Erweiterte Info (TMDB)] Info überarbeitet
+
+   </news>
+   <assets>
+     <icon>icon.png</icon>
+     <fanart>fanart.jpg</fanart>
+     <screenshot>resources/art/screenshot-01.jpg</screenshot>
+     <screenshot>resources/art/screenshot-02.jpg</screenshot>
+   </assets>
+ </extension>
+</addon>
+
+<addon id="script.module.requests"
+       name="requests"
+       version="2.22.0"
+       provider-name="kennethreitz">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.urllib3" version="1.22"/>
+    <import addon="script.module.chardet" version="3.0.4"/>
+    <import addon="script.module.idna" version="2.6"/>
+    <import addon="script.module.certifi" version="2017.07.27.1"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Python HTTP for Humans</summary>
+    <description lang="en_GB">Packed for KODI from https://pypi.org/project/requests/</description>
+    <platform>all</platform>
+    <language></language>
+    <license>Apache2</license>
+    <forum></forum>
+    <website>http://python-requests.org</website>
+    <source>https://github.com/Freso/script.module.requests</source>
+    <email>freso.dk AT gmail.com</email>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.simple.downloader" name="Simple Downloader for xbmc plugins" provider-name="TheCollective" version="1.9.5">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.common.plugin.cache" version="2.5.0" />
+    <import addon="script.module.parsedom" version="2.5.1" />
+  </requires>
+  <extension library="default.py" point="xbmc.service" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Simple downloader for xbmc plugins.</summary>
+  </extension>
+  <extension library="lib" point="xbmc.python.module" />
+</addon>
+
+<addon id="script.module.simplejson"
+       name="simplejson"
+       version="3.16.1" 
+       provider-name="Bob Ippolito">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary lang="en">Simple, fast, extensible JSON encoder/decoder for Python</summary>
+    <description lang="en">Simple, fast, extensible JSON encoder/decoder for Python</description>
+    <disclaimer lang="en">Code taken from https://pypi.org/project/simplejson/</disclaimer>
+    <license>MIT License, Academic Free License v. 2.1</license>
+    <website>https://pypi.org/project/simplejson/</website>
+    <source>https://github.com/simplejson/simplejson</source>
+  </extension>
+</addon>
+
+<addon id="script.module.six"
+       name="six"
+       version="1.13.0"
+       provider-name="gutworth">
+  <requires>
+    <import addon="xbmc.python"
+    		version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Python 2 and 3 compatibility utilities.</summary>
+    <description lang="en">Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing over the differences between the Python versions with the goal of writing Python code that is compatible on both Python versions. See the documentation for more information on what is provided.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://pypi.org/project/six/</source>
+    <website>https://pypi.org/project/six/</website>
+  </extension>
+</addon>
+
+<addon id="script.module.urllib3"
+       name="urllib3"
+       version="1.25.6"
+       provider-name="Andrey Petrov">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">HTTP library with thread-safe connection pooling, file post, and more.</summary>
+    <description lang="en_GB">Packed for KODI from https://pypi.org/project/urllib3/</description>
+    <license>MIT</license>
+    <website>https://urllib3.readthedocs.io/en/latest/</website>
+    <source>https://github.com/urllib3/urllib3</source>
+    <email>freso.dk AT gmail.com</email>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.urlresolver" name="URLResolver" version="5.1.20" provider-name="tvaddons">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
+        <import addon="plugin.googledrive" optional="true" />
+        <import addon="plugin.program.indigo" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
+        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
+        <forum>https://www.tvaddons.co/forums</forum>
+        <website>https://www.tvaddons.co</website>
+    </extension>
+</addon>
+
+<addon id="script.module.win_inet_pton" name="win-inet-pton" version="1.1.0" provider-name="hickeroar">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Native python inet_pton implementation on Windows (with ctypes)</summary>
+    <description lang="en_GB">Native inet_pton and inet_ntop implementation for Python on Windows (with ctypes).</description>
+    <platform>windows</platform>
+    <language></language>
+    <license>Public Domain</license>
+    <forum></forum>
+    <website>https://github.com/hickeroar/win_inet_pton</website>
+    <source>https://github.com/dagwieers/script.module.win_inet_pton</source>
+    <email>dag@wieers.com</email>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="2021.01.08" provider-name="Rick Phillips (ruuk)">
+    <requires>
+        <import addon="xbmc.python" version="2.26.0" />
+        <import addon="script.module.addon.signals" version="0.0.1"/>
+        <import addon="script.module.kodi-six" version="0.0.4"/>
+    </requires>
+    <extension point="xbmc.python.script" library="control.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Module providing access to youtube-dl video stream extraction</summary>
+        <description lang="en_GB">Module providing access to youtube-dl video stream extraction for hundreds of sites. Version is based on youtube-dl date version: YY.MDD.V where V is the addon specific sub-version. Also provides downloading with the option for background downloading with a queue and queue manager.</description>
+        <summary lang="el_EL">Βοηθητική μονάδα πρόσβασης στους επιλυτές youtube-dl για την εξαγωγή ροών βίντεο</summary>
+        <description lang="el_EL">Βοηθητική μονάδα πρόσβασης στους επιλυτές youtube-dl για την εξαγωγή ροών βίντεο από εκατοντάδες ιστότοπους. Η έκδοση βασίζεται στην έκδοση ημερομηνίας του youtube-dl: EE.MHH.EK όπου ΕΚ η υπό-έκδοση συγκεκριμένα για το πρόσθετο. Επιπλέον δίνει δυνατότητα μεταφόρτωσης στο παρασκήνιο με ουρά και διαχειριστή αυτής.</description>
+        <summary lang="es_ES">Módulo que proporciona acceso a YouTube-dl para la extracción de flujos de video</summary>
+        <description lang="es_ES">Módulo que proporciona acceso a YouTube-dl para la extracción de flujos de video de cientos de sitios. La versión está basada en la versión de fecha youtube-dl: YY.MDD.V donde V es la subversión específica del complemento. También permite descargas con la opción de descarga en segundo plano con una cola y un administrador de colas.</description>
+        <license>LGPL-2.1-only</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=200877</forum>
+        <source>https://github.com/ruuk/script.module.youtube.dl</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="service.xbmc.tts"
+       name="Kodi Screen Reader"
+       version="1.0.8"
+       provider-name="Rick Phillips (ruuk), pvagner">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension point="xbmc.service" library="main.py" start="login"></extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Text to speech for XBMC</summary>
+    <description lang="en">Text to speech for XBMC</description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=117199</forum>
+    <source>https://github.com/ruuk/service.xbmc.tts</source>
+	<website>http://ruuk.github.io/service.xbmc.tts</website>
+  </extension>
+</addon>
+
 <addon id="repository.sandmann79.plugins" name="Sandmann79s Repository Leia" version="1.0.3" provider-name="Sandmann79">
 	<extension point="xbmc.addon.repository" name="Sandmann79s Repository Leia">
 		<info compressed="false">https://raw.githubusercontent.com/Sandmann79/xbmc/master/packages/addons.xml</info>
